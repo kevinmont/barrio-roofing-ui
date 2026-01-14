@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Universal Quality Roofing LLC
 
-## Getting Started
+![Deploy to AWS S3](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/deploy.yml/badge.svg)
 
-First, run the development server:
+Professional roofing, construction, and remodeling services website built with Next.js.
+
+## 🏗️ Features
+
+- **Modern Design**: Premium, responsive UI with Tailwind CSS
+- **Service Pages**: Roofing, Construction, and Remodeling sections
+- **Quote System**: Multi-step estimate form
+- **Static Export**: Optimized for AWS S3 hosting
+- **Automated Deployment**: GitHub Actions CI/CD pipeline
+
+## 🚀 Quick Start
+
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build & Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Build for production
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Test static export locally
+npx serve out
+```
 
-## Learn More
+## 📦 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is configured for automatic deployment to AWS S3 using IAM Role ARN with OIDC.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Quick Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Configure AWS OIDC** (one-time setup):
+   - See [AWS-OIDC-SETUP.md](./AWS-OIDC-SETUP.md) for detailed instructions
+   
+2. **Set GitHub Secret**:
+   ```bash
+   ./setup-deployment.sh
+   ```
 
-## Deploy on Vercel
+3. **Deploy**:
+   ```bash
+   git push origin main
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **OIDC Setup**: See [AWS-OIDC-SETUP.md](./AWS-OIDC-SETUP.md)
+- **Quick Start**: See [QUICKSTART.md](./QUICKSTART.md)
+- **Full Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Deployment**: AWS S3 + GitHub Actions
+- **Hosting**: Static Export
+
+## 📁 Project Structure
+
+```
+barrio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions workflow
+├── public/                     # Static assets
+├── src/
+│   ├── app/                    # Next.js pages
+│   │   ├── page.tsx           # Homepage
+│   │   ├── services/          # Services page
+│   │   └── estimate/          # Quote form
+│   └── components/            # React components
+│       ├── Navbar.tsx
+│       ├── Hero.tsx
+│       └── Footer.tsx
+├── next.config.ts             # Next.js configuration
+└── tailwind.config.ts         # Tailwind configuration
+```
+
+## 🌐 Pages
+
+- **Home** (`/`) - Hero section with service overview
+- **Services** (`/services`) - Roofing, Construction, Remodeling
+- **Estimate** (`/estimate`) - Multi-step quote form
+
+## 📱 Contact
+
+- **Phone**: [206-710-6754](tel:+12067106754)
+- **Email**: universalqualityroofingllc@hotmail.com
+- **Facebook**: [Universal Quality Roofing](https://facebook.com/profile.php?id=100091521892847)
+- **TikTok**: [@universalqualityroofing](https://tiktok.com/@universalqualityroofing)
+
+## 📄 License
+
+© 2026 Universal Quality Roofing LLC. All rights reserved.
+
+---
+
+**Built with ❤️ using Next.js and deployed to AWS S3**
