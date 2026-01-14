@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { ChevronLeft, Check, Home, PenTool, Shield, ArrowRight, Loader2 } from 'lucide-react';
 
 type FormData = {
@@ -285,6 +286,8 @@ export default function EstimatePage() {
                 </p>
 
             </div>
+
+            <Footer />
         </main>
     );
 }

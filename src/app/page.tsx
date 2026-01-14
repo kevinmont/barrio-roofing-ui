@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
               },
               {
                 title: 'Gutter Services',
-                desc: 'Seamless gutter installation and cleaning to protect your home’s foundation.',
+                desc: 'Seamless gutter installation and cleaning to protect your home foundation.',
                 icon: '🌧️'
               }
             ].map((feature, idx) => (
@@ -49,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

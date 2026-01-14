@@ -87,43 +87,12 @@ const Navbar = () => {
                 <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col items-end text-right space-y-2">
 
                     <Link
-                        href="/service-maintenance"
+                        href="/services"
                         className="text-xl font-bold text-slate-900 uppercase tracking-wide hover:text-orange-600 py-3"
                         onClick={() => setIsMenuOpen(false)}
                     >
-                        Service & Maintenance
+                        Services
                     </Link>
-
-                    {/* Expandable Item: Residential */}
-                    <div className="w-full flex flex-col items-end">
-                        <button
-                            onClick={() => toggleSubmenu('residential')}
-                            className="flex items-center justify-end gap-2 text-xl font-bold text-slate-900 uppercase tracking-wide hover:text-orange-600 py-3 w-full"
-                        >
-                            Residential <ChevronDown size={20} className={`text-slate-400 transition-transform ${openSubmenu === 'residential' ? 'rotate-180' : ''}`} />
-                        </button>
-
-                        {/* Added safe area padding bottom/margin to avoid layout jump on click */}
-                        <div className={`overflow-hidden transition-all duration-300 flex flex-col items-end space-y-3 pr-4 border-r-2 border-slate-100 ${openSubmenu === 'residential' ? 'max-h-[300px] my-2' : 'max-h-0'}`}>
-                            <Link href="/residential/roofing" className="text-slate-600 font-semibold hover:text-orange-500">Roof Replacement</Link>
-                            <Link href="/residential/repairs" className="text-slate-600 font-semibold hover:text-orange-500">Repairs</Link>
-                            <Link href="/residential/cleaning" className="text-slate-600 font-semibold hover:text-orange-500">Roof Cleaning</Link>
-                        </div>
-                    </div>
-
-                    {/* Expandable Item: Commercial */}
-                    <div className="w-full flex flex-col items-end">
-                        <button
-                            onClick={() => toggleSubmenu('commercial')}
-                            className="flex items-center justify-end gap-2 text-xl font-bold text-slate-900 uppercase tracking-wide hover:text-orange-600 py-3 w-full"
-                        >
-                            Commercial <ChevronDown size={20} className={`text-slate-400 transition-transform ${openSubmenu === 'commercial' ? 'rotate-180' : ''}`} />
-                        </button>
-                        <div className={`overflow-hidden transition-all duration-300 flex flex-col items-end space-y-3 pr-4 border-r-2 border-slate-100 ${openSubmenu === 'commercial' ? 'max-h-[300px] my-2' : 'max-h-0'}`}>
-                            <Link href="/commercial/flat-roof" className="text-slate-600 font-semibold hover:text-orange-500">Flat Roofing</Link>
-                            <Link href="/commercial/maintenance" className="text-slate-600 font-semibold hover:text-orange-500">Maintenance Plans</Link>
-                        </div>
-                    </div>
 
                     <Link
                         href="/about"
